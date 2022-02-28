@@ -1,0 +1,13 @@
+set1 = set()
+print("Intial blank Set: ")
+print(set1)
+set1 = set("AIRBUS")
+print("\nSet with the use of String: ")
+print(set1)
+String = 'BOEING'
+set1 = set(String)
+print("\nSet with the use of an Object: " )
+print(set1)
+set1 = set(["BOEING", "AND", "AIRBUS"])
+print("\nSet with the use of List: ")
+print(set1)

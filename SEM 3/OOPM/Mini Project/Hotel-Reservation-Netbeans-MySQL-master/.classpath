@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="_Java Library/org-apache-xmlrpc.jar"/>
+	<classpathentry kind="lib" path="_Java Library/swingx-0.9.4.jar"/>
+	<classpathentry kind="lib" path="_Java Library/swingx-0.9.5-2.jar"/>
+	<classpathentry kind="lib" path="_Java Library/swingx-0.9.5.jar"/>
+	<classpathentry kind="lib" path="_Java Library/swingx-all-1.6.4.jar"/>
+	<classpathentry kind="lib" path="_Java Library/xerces-2.9.0.jar"/>
+	<classpathentry kind="lib" path="_Java Library/xmlrpc-helma-1.0.jar"/>
+	<classpathentry kind="lib" path="dist/lib/AbsoluteLayout.jar"/>
+	<classpathentry kind="lib" path="dist/lib/jcalendar-1.4.jar"/>
+	<classpathentry kind="lib" path="dist/lib/JPanelSlider.jar"/>
+	<classpathentry kind="lib" path="dist/lib/mysql-connector-java-5.1.23-bin.jar"/>
+	<classpathentry kind="lib" path="dist/lib/UsuLibrary.jar"/>
+	<classpathentry kind="lib" path="dist/SIRH.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

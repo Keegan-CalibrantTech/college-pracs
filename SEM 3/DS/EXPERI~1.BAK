@@ -1,0 +1,118 @@
+#include<stdio.h>
+#include<stdbool.h>
+#include<cstdlib>
+#include<string.h>
+#define SIZE 20
+int s,top=-1;
+typedef struct book
+{
+ char name[30];
+ float price;
+ int pages; 
+}book;
+book stack[SIZE];
+bool isfull()
+{
+    if(top==s-1)
+        return true;
+    else
+        return false;
+}
+bool isempty()
+{
+    if(top==-1)
+        return true;
+    else
+        return false;
+}
+book getbook()
+{
+    book b;
+    printf("\nEnter Book Name:");
+    scanf("%s",&b.name);
+    printf("Enter Price:");
+    scanf("%f",&b.price);
+    printf("Enter pages:");
+    scanf("%d",&b.pages);
+    return b;
+}
+int showbook(book b)
+{
+    printf("\nBook name:%s\nPrice:%f\nPages:%d\n",b.name,b.price,b.pages);
+    return 0;
+}
+int push(book b)
+{
+    if (isfull())
+    printf("\nStack Overflow");
+    else
+    {
+        top++;
+        stack[top]=b;
+    }
+    return 0;
+}
+int pop()
+{
+    if(isempty())
+    printf("\nSTACK EMPTY");
+    else
+    {
+        printf("\n\tPopped\n");
+        showbook(stack[top]);
+        top--;
+    }
+    return 0;
+}
+int peek()
+{
+    if(isempty())
+        printf("\nStack Empty\n");
+    else
+    {
+        printf("\n\tBook at the top\n");
+        showbook(stack[top]);
+    }
+    return 0;
+}
+int display()
+{
+    int i;
+    if (isempty())
+    printf("\nSTACK EMPTY\n");
+    else
+    {
+        printf("\n\tDisplaying Stack\n");
+        for(i=top ; i>=0 ; i--)
+        {
+            showbook(stack[i]);
+        }
+    }
+    return 0;
+}
+int main()
+{
+    int ch;
+    book a;
+    printf("\nEnter the size of the stack: ");
+    scanf("%d",&s);
+    start:
+    printf("\n\t MENU\n1.Push\n2.Pop\n3.Peek\n4.Display\n5.Exit\n\nEnter your choice:");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+        case 1: a = getbook();
+                push(a);
+                break;
+        case 2: pop();
+                break;
+        case 3: peek();
+                break;
+        case 4: display();
+                break;
+        case 5: exit(0);
+        default:printf("\nINVALID CHOICE");
+    }
+    goto start;
+    return 0;
+}
